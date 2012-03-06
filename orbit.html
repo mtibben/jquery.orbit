@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="jquery.orbit.js"></script>
+</head>
+<body style="width:960px; margin: 40px auto;">
+    
+    
+    <!-- container div determines size of orbit -->
+    <!-- data-start-position in degrees sets start position -->
+    <!-- data-end-position in degrees sets end position. If this is missing, animation will not end -->
+    <!-- data-direction sets the direction of orbit. clockwise or anticlockwise -->
+    <!-- data-explode-distance controls the number of pixels that the bubbles explode outwards -->
+    <!-- data-speed controls the speed of the animation. -->
+    <!-- data-rewind controls whether the animation will spring back and rewind when stopping -->
+    <!-- data-vary-size controls the percentage difference in size -->
+    
+    <div class="orbit-carousel" data-start-position="90" data-end-position="240" data-explode-distance="30" data-speed="1" data-vary-size="10"  style="float:left; width: 450px; height: 300px; border: 1px solid red">
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+    </div>
+    
+    <div class="orbit-carousel" data-direction="anticlockwise" data-explode-distance="30" data-vary-size="40" style="float:left; width: 450px; height: 300px; border: 1px solid red">
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+    </div>
+    
+    <div style="clear:both"></div>
+    
+    <div class="orbit-carousel"  data-start-position="90" data-explode-distance="0" data-rewind="false" style="width: 960px; height: 300px; border: 1px solid red">
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+        <img src="bubble.png" />
+    </div>
+    
+    
+    <script>
+        $(window).load(function(){
+            $(".orbit-carousel").orbit();
+        });
+    </script>
+    
+</body>
+</html>
